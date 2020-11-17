@@ -1,6 +1,7 @@
 {
   "name": "solo-project",
   "version": "1.0.0",
+  "lint": "eslint 'src/**/*.js' --fix",
   "description": "booking feature",
   "main": "index.js",
   "scripts": {
