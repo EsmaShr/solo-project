@@ -1,0 +1,66 @@
+{
+  "name": "solo-project",
+  "version": "1.0.0",
+  "description": "booking feature",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "build": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EsmaShr/solo-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EsmaShr/solo-project/issues"
+  },
+  "homepage": "https://github.com/EsmaShr/solo-project#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-regular-svg-icons": "^5.7.2",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@material-ui/core": "^4.11.0",
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.16.3",
+    "moment": "^2.29.1",
+    "mongoose": "^5.10.15",
+    "node-fetch": "^2.3.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-file-base64": "^1.0.3",
+    "react-hot-loader": "^4.6.3",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "babel-loader": "^8.2.1",
+    "concurrently": "^5.0.0",
+    "cross-env": "^6.0.3",
+    "css-loader": "^1.0.1",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
+    "file-loader": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^7.0.1",
+    "nodemon": "^1.19.4",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.3.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-hot-middleware": "^2.24.3"
+  }
+}
