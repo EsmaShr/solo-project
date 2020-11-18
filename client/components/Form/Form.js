@@ -24,15 +24,11 @@ const Form = ({ currentId, setCurrentId }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('event', currentId);
-    if (currentId === 0) {
+   
       dispatch(createPost(postData));
-      // clear();
+  
     } 
-    //else {
-    //   dispatch(updatePost(currentId, postData));
-    //   clear();
-    // }
-  };
+
 
   return (
     <Paper className={classes.paper}>

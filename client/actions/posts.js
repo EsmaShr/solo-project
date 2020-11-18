@@ -1,9 +1,16 @@
 
 import { FETCH_ALL, CREATE, DELETE } from '../constants/actionTypes';
-import * as api from '../api';
+
+import axios from 'axios';
+const url = 'http://localhost:8080/posts';
+ const fetchPostsRequest = () => axios.get(url);
+ const createPostRequest = (newPost) => axios.post(url, newPost);
+ const deletePostRequest = (id) => axios.delete(`${url}/${id}`);
+
+
 export const getPosts = () => async (dispatch) => {
   try {
-    const { data } = await api.fetchPosts();
+    const { data } = await fetchPostsRequest();
 
     dispatch({ type: FETCH_ALL, payload: data });
   } catch (error) {
@@ -13,7 +20,7 @@ export const getPosts = () => async (dispatch) => {
 
 export const createPost = (post) => async (dispatch) => {
   try {
-    const { data } = await api.createPost(post);
+    const { data } = await createPostRequest(post);
 
     dispatch({ type: CREATE, payload: data });
   } catch (error) {
@@ -22,7 +29,7 @@ export const createPost = (post) => async (dispatch) => {
 };
 export const deletePost = (id) => async (dispatch) => {
   try {
-    await await api.deletePost(id);
+    await await deletePostRequest(id);
 
     dispatch({ type: DELETE, payload: id });
   } catch (error) {
