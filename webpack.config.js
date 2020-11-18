@@ -3,6 +3,8 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// newimport path from 'path';
+// import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 module.exports = {
   entry: [
@@ -38,11 +40,7 @@ module.exports = {
      * to localhost:3000/api/* (where our Express server is running)
      */
     proxy: {
-      '/api/**': {
-        target: 'http://localhost:3000/',
-        secure: false,
-      },
-      '/build/**': {
+      '/': {
         target: 'http://localhost:3000/',
         secure: false,
       },
